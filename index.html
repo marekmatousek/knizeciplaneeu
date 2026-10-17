@@ -92,6 +92,9 @@ document.documentElement.lang=L;if(L!=='cs')document.title=T.title;
 [].forEach.call(document.querySelectorAll('.jazyk a'),function(a){if(a.hreflang===L)a.setAttribute('aria-current','true')});
 var bookingEngineConfig={id:'019b07de-e391-703c-8895-ce60cfa2cdc0',lang:L,currency:'CZK'};
 var a=document.createElement('script');a.src='https://booking.previo.app/loader/';document.head.appendChild(a);
+// Sentry jako na knizeciplane.cz (projekt heals/knizeciplane, Loader až po načtení stránky; štítek site odliší .eu)
+window.sentryOnLoad=function(){Sentry.init({environment:'live',release:'kp-eu@2026-10-17',initialScope:{tags:{site:'knizeciplane.eu',lang:L}}});};
+addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.src='https://js-de.sentry-cdn.com/0fa3d4e0e11809c8c1b6199f868be13c.min.js';s.crossOrigin='anonymous';s.async=true;document.head.appendChild(s);},1500);});
 </script>
 </body>
 </html>
