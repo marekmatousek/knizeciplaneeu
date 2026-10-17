@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rezervace — Penzion Hájenka, Knížecí Pláně</title>
+<meta name="description" content="Útěk od civilizace na Knížecí Pláně: klid, relax a pohoda v Penzionu Hájenka u I. zóny NP Šumava. Rezervujte si pobyt.">
+<meta name="theme-color" content="#08140d">
+<meta property="og:title" content="Penzion Hájenka — klid, relax, pohoda">
+<meta property="og:image" content="https://www.sumava.eu/kp-shared/media/video/kp-hero-20261015f.jpg">
+<link rel="canonical" href="https://www.knizeciplane.eu/">
+<link rel="icon" href="https://www.sumava.eu/kp-shared/images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- písmo jako knizeciplane.cz: nadpisy a text Alkatra, lišta Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* čistý světlý vzhled jako dolní část knizeciplane.cz (kp-b-*, kp-f-*) */
+:root{--text:#666;--head:#222;--a:#a8845a;--a2:#8a6a45;--line:rgba(0,0,0,.1);--r:12px;--bar:64px;
+--font:'Alkatra',system-ui,-apple-system,'Segoe UI',sans-serif;--ui:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;background:#fff;color:var(--text);font:400 17px/1.55 var(--font);-webkit-font-smoothing:antialiased}
+/* lišta jako na knizeciplane.cz (tmavá zelená, rozostření), tady pevně podložená, protože pod ní není video */
+.lista{position:sticky;top:0;z-index:10;height:var(--bar);display:flex;align-items:center;gap:20px;padding:0 max(16px,env(safe-area-inset-left));
+  background:rgba(8,20,13,.94);-webkit-backdrop-filter:blur(6px) saturate(125%);backdrop-filter:blur(6px) saturate(125%);font-family:var(--ui)}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:700;font-size:18px;white-space:nowrap}
+.logo img{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);padding:2px}
+.menu{display:flex;gap:18px;margin:0;padding:0;list-style:none;overflow-x:auto;scrollbar-width:none}
+.menu::-webkit-scrollbar{height:0}
+.menu a{color:rgba(255,255,255,.8);text-decoration:none;font-size:14.5px;font-weight:600;white-space:nowrap}
+.menu a:hover{color:#fff}
+.jazyk{margin-left:auto;display:flex;gap:2px;padding:3px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14)}
+.jazyk a{color:rgba(255,255,255,.75);text-decoration:none;font-size:12.5px;font-weight:700;letter-spacing:.06em;padding:6px 11px;border-radius:999px}
+.jazyk a[aria-current]{background:rgba(255,255,255,.9);color:#0a1a16}
+@media (max-width:899px){.menu{display:none}}
+.wrap{max-width:1210px;margin:0 auto;padding-left:16px;padding-right:16px}
+@media (min-width:600px){.wrap{padding-left:20px;padding-right:20px}}
+section{padding-top:40px}
+@media (min-width:900px){section{padding-top:64px}}
+.head{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:28px}
+.head h1,.head h2{margin:0;font-weight:500;font-size:30px;line-height:1.2;color:var(--head)}
+.head p{margin:6px 0 0}
+#previo-booking-engine{background:#fff;color:#1a1a1a;border:1px solid rgba(0,0,0,.05);border-radius:var(--r);min-height:420px;overflow:hidden;box-shadow:0 12px 32px rgba(120,90,50,.08)}
+.video{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;box-shadow:0 12px 32px rgba(120,90,50,.1);background:#e9e4dc}
+.video video{display:block;width:100%;height:100%;object-fit:cover}
+footer{margin-top:64px;border-top:1px solid var(--line)}
+footer .wrap{padding-top:28px;padding-bottom:32px;display:flex;flex-wrap:wrap;gap:8px 24px;font-size:16px}
+footer a{color:var(--head);text-decoration:none}
+footer a:hover{color:var(--a2)}
+footer .firma{flex-basis:100%;color:var(--text);font-size:15px}
+</style>
+</head>
+<body>
+<nav class="lista" aria-label="Menu">
+  <a class="logo" href="https://www.knizeciplane.cz/"><img src="https://www.sumava.eu/kp-shared/images/logo.svg" alt=""><span>Knížecí Pláně</span></a>
+  <ul class="menu">
+    <li><a data-t="home" href="https://www.knizeciplane.cz/">Domov</a></li>
+    <li><a data-t="rooms" href="https://www.knizeciplane.cz/#pricing">Pokoje</a></li>
+    <li><a data-t="history" href="https://www.knizeciplane.cz/history">Z historie</a></li>
+    <li><a data-t="webcam" href="https://webcam.sumava.eu/#knizeciplane2" target="_blank" rel="noopener">Webkamera</a></li>
+    <li><a data-t="prices" href="https://www.knizeciplane.cz/#pricing">Ceny</a></li>
+    <li><a data-t="contact" href="https://www.knizeciplane.cz/contact">Kontakt</a></li>
+  </ul>
+  <div class="jazyk"><a href="?lang=cs" hreflang="cs">CZ</a><a href="?lang=de" hreflang="de">DE</a><a href="?lang=en" hreflang="en">EN</a></div>
+</nav>
+<main>
+<section id="rezervace" class="wrap">
+  <div class="head"><h1 data-t="h1">Rezervace pobytu</h1><p data-t="sub">Penzion Hájenka na Knížecích Pláních, uprostřed Národního parku Šumava.</p></div>
+  <div id="previo-booking-engine"></div>
+</section>
+<section class="wrap">
+  <div class="video">
+    <video autoplay muted loop playsinline preload="metadata" poster="https://www.sumava.eu/kp-shared/media/video/kp-hero-20261015f.jpg" aria-label="Knížecí Pláně a penzion Hájenka">
+      <source src="https://www.sumava.eu/kp-shared/media/video/kp-hero-20261015f.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><a href="https://www.knizeciplane.cz/">knizeciplane.cz</a><a data-t="storno" href="https://www.knizeciplane.cz/cancellation-policy">Storno podmínky</a><a data-t="privacy" href="https://www.knizeciplane.cz/privacy-policy">Ochrana údajů</a><a href="mailto:info@knizeciplane.cz">info@knizeciplane.cz</a><a href="tel:+420774978767">+420 774 978 767</a>
+<span class="firma">Šumava uzdravuje s.r.o. · Knížecí pláně 1, 384 92 Borová Lada</span></div></footer>
+<script>
+// jazyk z ?lang= (CZ výchozí) — texty stránky + jazyk rezervace Previo
+var L=(new URLSearchParams(location.search).get('lang')||'cs').toLowerCase();if(!/^(cs|de|en)$/.test(L))L='cs';
+var T={
+ cs:{h1:'Rezervace pobytu',sub:'Penzion Hájenka na Knížecích Pláních, uprostřed Národního parku Šumava.',title:'Rezervace — Penzion Hájenka, Knížecí Pláně',
+     home:'Domov',rooms:'Pokoje',history:'Z historie',webcam:'Webkamera',prices:'Ceny',contact:'Kontakt',storno:'Storno podmínky',privacy:'Ochrana údajů'},
+ de:{h1:'Aufenthalt buchen',sub:'Pension Hájenka in Knížecí Pláně, mitten im Nationalpark Šumava.',title:'Reservierung — Pension Hájenka, Knížecí Pláně',
+     home:'Start',rooms:'Zimmer',history:'Geschichte',webcam:'Webcam',prices:'Preise',contact:'Kontakt',storno:'Stornobedingungen',privacy:'Datenschutz'},
+ en:{h1:'Book your stay',sub:'Hájenka Guesthouse at Knížecí Pláně, in the heart of the Šumava National Park.',title:'Booking — Hájenka Guesthouse, Knížecí Pláně',
+     home:'Home',rooms:'Rooms',history:'History',webcam:'Webcam',prices:'Prices',contact:'Contact',storno:'Cancellation policy',privacy:'Privacy'}}[L];
+document.documentElement.lang=L;if(L!=='cs')document.title=T.title;
+[].forEach.call(document.querySelectorAll('[data-t]'),function(a){a.textContent=T[a.dataset.t]});
+[].forEach.call(document.querySelectorAll('.jazyk a'),function(a){if(a.hreflang===L)a.setAttribute('aria-current','true')});
+var bookingEngineConfig={id:'019b07de-e391-703c-8895-ce60cfa2cdc0',lang:L,currency:'CZK'};
+var a=document.createElement('script');a.src='https://booking.previo.app/loader/';document.head.appendChild(a);
+</script>
+</body>
+</html>
